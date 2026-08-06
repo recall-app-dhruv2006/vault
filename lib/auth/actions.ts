@@ -65,7 +65,11 @@ export async function resetPasswordAction(_prev: AuthActionState, formData: Form
 
   const supabase = await createClient();
   const { error } = await supabase.auth.resetPasswordForEmail(parsed.data.email, {
-    redirectTo: `${publicEnv.NEXT_PUBLIC_APP_URL}/update-password`,
+    // Route through /auth/callback so the recovery `code` is exchanged for a
+    // session server-side before the user reaches /update-password. Sending
+    // users straight to /update-password?code=... skips that exchange, so
+    // updateUser() has no session to act on and fails.
+    redirectTo: `${publicEnv.NEXT_PUBLIC_APP_URL}/auth/callback?next=/update-password`,
   });
   if (error) return { error: friendlyAuthError(error.message) };
   return { success: "If an account exists for that email, a reset link is on its way." };
