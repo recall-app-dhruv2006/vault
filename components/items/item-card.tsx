@@ -36,7 +36,7 @@ export function ItemCard({ item, layout = "grid" }: { item: ItemWithUrls; layout
   }
 
   return (
-    <Link href={`/items/${item.id}`} className="group flex flex-col overflow-hidden rounded-lg border border-border bg-surface transition-colors hover:border-primary/40">
+    <Link href={`/item/${item.id}`} className="group flex flex-col overflow-hidden rounded-lg border border-border bg-surface transition-colors hover:border-primary/40">
       <div className="relative aspect-[4/3] w-full bg-muted">
         <Thumbnail item={item} icon={Icon} className="h-full w-full" fill />
         <button
