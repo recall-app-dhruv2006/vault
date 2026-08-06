@@ -1,4 +1,4 @@
--- Recall: Row Level Security
+-- Vault: Row Level Security
 -- Every user-owned table is locked to auth.uid() = user_id. Join tables are
 -- locked through their parent's ownership via EXISTS subqueries. No table
 -- relies on frontend filtering — the service-role client (which bypasses

@@ -41,7 +41,7 @@ export function isAllowedMimeType(mime: string): boolean {
 
 export function assertFileConstraints(file: { size: number; type: string }, maxBytes: number) {
   if (!isAllowedMimeType(file.type)) {
-    throw new Error(`Unsupported file type: ${file.type}. Recall accepts JPEG, PNG, WebP, HEIC, and PDF files.`);
+    throw new Error(`Unsupported file type: ${file.type}. Vault accepts JPEG, PNG, WebP, HEIC, and PDF files.`);
   }
   if (file.size > maxBytes) {
     throw new Error(`File is too large. Maximum size is ${(maxBytes / 1_000_000).toFixed(0)}MB on your current plan.`);

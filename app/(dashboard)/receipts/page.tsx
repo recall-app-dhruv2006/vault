@@ -40,7 +40,7 @@ export default async function ReceiptsPage({ searchParams }: { searchParams: Pro
 
         <TabsContent value="all">
           {all.length === 0 ? (
-            <EmptyState icon={ReceiptIcon} title="No receipts yet" description="Scan a receipt and Recall will extract the merchant, total, and any return deadline for you." />
+            <EmptyState icon={ReceiptIcon} title="No receipts yet" description="Scan a receipt and Vault will extract the merchant, total, and any return deadline for you." />
           ) : (
             <div className="space-y-2">{all.map((r) => <ReceiptRow key={r.id} receipt={r} />)}</div>
           )}

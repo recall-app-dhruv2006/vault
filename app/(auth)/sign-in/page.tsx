@@ -51,7 +51,7 @@ function SignInForm() {
         <SubmitButton>Sign in</SubmitButton>
       </form>
       <p className="text-center text-sm text-muted-foreground">
-        New to Recall? <Link href="/sign-up" className="text-primary hover:underline">Create an account</Link>
+        New to Vault? <Link href="/sign-up" className="text-primary hover:underline">Create an account</Link>
       </p>
     </div>
   );

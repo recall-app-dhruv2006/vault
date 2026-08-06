@@ -1,4 +1,4 @@
--- Recall: indexes
+-- Vault: indexes
 
 create index if not exists idx_items_user_id on items(user_id) where deleted_at is null;
 create index if not exists idx_items_user_status on items(user_id, processing_status);

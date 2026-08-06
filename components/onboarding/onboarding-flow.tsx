@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import {
-  Brain, Camera, ShoppingBag, GraduationCap, Plane, ChefHat, Receipt,
+  Lock, Camera, ShoppingBag, GraduationCap, Plane, ChefHat, Receipt,
   FileText, Clapperboard, StickyNote, Check, Link2, ImageIcon, Shield,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -55,11 +55,11 @@ export function OnboardingFlow({ initialStep, displayName }: { initialStep: stri
       {step === "welcome" && (
         <div className="space-y-6 text-center">
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-            <Brain className="h-7 w-7" />
+            <Lock className="h-7 w-7" />
           </div>
           <div className="space-y-2">
             <h1 className="text-h2">Welcome{displayName ? `, ${displayName.split(" ")[0]}` : ""}.</h1>
-            <p className="text-muted-foreground">Recall is your private, searchable memory. Save anything — Recall organizes it and helps you find it again with plain language, not exact keywords.</p>
+            <p className="text-muted-foreground">Vault is your private, searchable memory. Save anything — Vault organizes it and helps you find it again with plain language, not exact keywords.</p>
           </div>
           <Button className="w-full" onClick={() => goTo("preferences")}>Get started</Button>
         </div>
@@ -115,13 +115,13 @@ export function OnboardingFlow({ initialStep, displayName }: { initialStep: stri
           <div className="space-y-2 text-center">
             <h1 className="text-h2">Your privacy, plainly</h1>
             <p className="text-muted-foreground">
-              What you save is private to you. When you save something, Recall's AI reads it to generate a title,
+              What you save is private to you. When you save something, Vault's AI reads it to generate a title,
               summary, and tags so you can find it later — that's the only reason your content is processed. It's
               never shown to other users, never sold, and you can delete anything at any time.
             </p>
           </div>
           <Button className="w-full" onClick={() => completeOnboardingAction()}>
-            {savedItemId ? "Go to my memory library" : "Start using Recall"}
+            {savedItemId ? "Go to my memory library" : "Start using Vault"}
           </Button>
         </div>
       )}
@@ -142,7 +142,7 @@ function FirstSaveStep({ onSkip, onSaved, toast }: { onSkip: () => void; onSaved
       : await saveNoteAction({ title: noteContent.slice(0, 60) || "My first note", content: noteContent });
     setIsPending(false);
     if (result.success) {
-      toast({ title: "Saved! Recall is analyzing it now.", variant: "success" });
+      toast({ title: "Saved! Vault is analyzing it now.", variant: "success" });
       onSaved(result.itemId);
     } else {
       toast({ title: "Couldn't save that", description: result.error, variant: "error" });

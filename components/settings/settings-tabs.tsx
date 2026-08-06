@@ -135,13 +135,13 @@ export function SettingsTabs({
         <ToggleRow label="Return deadline reminders" description="In-app reminders before a return window closes." checked={local.return_reminders} onChange={(v) => saveField("return_reminders", v)} />
         <ToggleRow label="Processing completion" description="Notify when an item finishes analyzing." checked={local.processing_notifications} onChange={(v) => saveField("processing_notifications", v)} />
         <ToggleRow label="Email notifications" description="Occasional email updates about your account." checked={local.email_notifications} onChange={(v) => saveField("email_notifications", v)} />
-        <ToggleRow label="Product updates" description="News about new Recall features." checked={local.product_updates} onChange={(v) => saveField("product_updates", v)} />
+        <ToggleRow label="Product updates" description="News about new Vault features." checked={local.product_updates} onChange={(v) => saveField("product_updates", v)} />
       </TabsContent>
 
       <TabsContent value="privacy" className="max-w-md space-y-6">
         <div className="space-y-2">
           <p className="text-sm font-medium">Search history</p>
-          <p className="text-sm text-muted-foreground">Recall keeps your recent searches so you can revisit them. Clear it anytime.</p>
+          <p className="text-sm text-muted-foreground">Vault keeps your recent searches so you can revisit them. Clear it anytime.</p>
           <Button
             variant="outline"
             size="sm"
@@ -169,7 +169,7 @@ export function SettingsTabs({
               const url = URL.createObjectURL(blob);
               const a = document.createElement("a");
               a.href = url;
-              a.download = "recall-export.json";
+              a.download = "vault-export.json";
               a.click();
               URL.revokeObjectURL(url);
             }}

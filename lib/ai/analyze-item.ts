@@ -2,7 +2,7 @@ import "server-only";
 import { generateStructured } from "@/lib/ai/json-utils";
 import { itemAnalysisSchema, FALLBACK_ANALYSIS, type ItemAnalysis } from "@/lib/ai/schemas";
 
-const SYSTEM_PROMPT = `You are the analysis engine for Recall, a private personal-memory app. \
+const SYSTEM_PROMPT = `You are the analysis engine for Vault, a private personal-memory app. \
 A user has saved a piece of content and you must extract exactly the structured information \
 they would need to find it again weeks or months later using natural language search. \
 Be concrete and specific — favor descriptive nouns, colors, brand names, prices, and places \

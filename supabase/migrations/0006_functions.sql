@@ -1,4 +1,4 @@
--- Recall: triggers + RPC functions
+-- Vault: triggers + RPC functions
 
 -- updated_at maintenance -----------------------------------------------------
 create or replace function set_updated_at()

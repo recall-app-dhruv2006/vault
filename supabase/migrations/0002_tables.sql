@@ -1,4 +1,4 @@
--- Recall: core tables
+-- Vault: core tables
 -- Embedding dimension: 1024 (Voyage AI voyage-3-lite default). If you switch
 -- embedding providers/models, run a follow-up migration to ALTER the
 -- `item_embeddings.embedding` column dimension and re-embed all items.

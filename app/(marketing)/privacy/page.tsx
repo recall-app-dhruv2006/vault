@@ -7,7 +7,7 @@ export default function PrivacyPage() {
   return (
     <LegalPage title="Privacy">
       <p>
-        Recall exists to help you find things you saved — not to build a profile of you. This page explains, in
+        Vault exists to help you find things you saved — not to build a profile of you. This page explains, in
         plain language, what we store and what our AI processing touches.
       </p>
 
@@ -40,7 +40,7 @@ export default function PrivacyPage() {
       <ul>
         <li>We don't sell your data.</li>
         <li>We don't show your saved content to other users.</li>
-        <li>We don't claim end-to-end encryption — files are stored securely in private, access-controlled storage, but Recall's servers can technically access content to process it, the same as most SaaS products.</li>
+        <li>We don't claim end-to-end encryption — files are stored securely in private, access-controlled storage, but Vault's servers can technically access content to process it, the same as most SaaS products.</li>
       </ul>
 
       <h2>Questions</h2>

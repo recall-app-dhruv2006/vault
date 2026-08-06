@@ -91,7 +91,7 @@ export async function safeFetch(rawUrl: string, opts: { maxBytes?: number; timeo
       response = await fetch(currentUrl, {
         redirect: "manual",
         signal: controller.signal,
-        headers: { "User-Agent": "RecallBot/1.0 (+https://recall.app/bot)" },
+        headers: { "User-Agent": "VaultBot/1.0 (+https://vault.app/bot)" },
       });
     } finally {
       clearTimeout(timer);

@@ -8,23 +8,23 @@
  */
 
 export const brand = {
-  name: "Recall",
-  shortName: "Recall",
+  name: "Vault",
+  shortName: "Vault",
   tagline: "Find anything you remember seeing.",
   description:
-    "Recall turns your screenshots, links, receipts, notes, and documents into a private AI-searchable memory.",
+    "Vault turns your screenshots, links, receipts, notes, and documents into a private AI-searchable memory.",
   promise: "Save anything. Remember nothing. Find everything.",
   slogan: "I know I saw it somewhere.",
-  domain: "recall.app",
-  supportEmail: "support@recall.app",
+  domain: "vault.app",
+  supportEmail: "support@vault.app",
   social: {
-    twitter: "https://twitter.com/recallapp",
-    linkedin: "https://linkedin.com/company/recallapp",
-    instagram: "https://instagram.com/recallapp",
+    twitter: "https://twitter.com/vaultapp",
+    linkedin: "https://linkedin.com/company/vaultapp",
+    instagram: "https://instagram.com/vaultapp",
   },
   legal: {
-    company: "Recall Labs, Inc.",
-    lastUpdated: "2026-08-05",
+    company: "Vault Labs, Inc.",
+    lastUpdated: "2026-08-06",
   },
 } as const;
 

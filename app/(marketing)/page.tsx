@@ -20,8 +20,8 @@ const PROBLEMS = [
 
 const STEPS = [
   { icon: Link2, title: "Save anything", description: "Paste a link, drop in a screenshot, upload a PDF, or jot a quick note. Takes seconds." },
-  { icon: ScanLine, title: "Recall organizes it", description: "AI reads, categorizes, tags, and summarizes what you saved — no folders to manage." },
-  { icon: FileText, title: "Ask naturally and find it", description: "Search the way you'd describe it to a friend. Recall shows you why each result matched." },
+  { icon: ScanLine, title: "Vault organizes it", description: "AI reads, categorizes, tags, and summarizes what you saved — no folders to manage." },
+  { icon: FileText, title: "Ask naturally and find it", description: "Search the way you'd describe it to a friend. Vault shows you why each result matched." },
 ];
 
 const USE_CASES = [
@@ -114,7 +114,7 @@ export default function MarketingHomePage() {
       <section className="container py-20" id="privacy">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-h2">Private by default</h2>
-          <p className="mt-3 text-muted-foreground">Recall exists to help you find your own things — not to build a profile about you.</p>
+          <p className="mt-3 text-muted-foreground">Vault exists to help you find your own things — not to build a profile about you.</p>
         </div>
         <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2">
           {[

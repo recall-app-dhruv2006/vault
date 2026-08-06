@@ -2,7 +2,7 @@ import "server-only";
 import { generateStructured } from "@/lib/ai/json-utils";
 import { receiptExtractionSchema, FALLBACK_RECEIPT, type ReceiptExtraction } from "@/lib/ai/schemas";
 
-const SYSTEM_PROMPT = `You extract structured purchase data from receipt images or PDFs for Recall, \
+const SYSTEM_PROMPT = `You extract structured purchase data from receipt images or PDFs for Vault, \
 a personal memory app. Only report values that are actually printed on the receipt. Use null for \
 anything not present or illegible — never guess a number. Dates must be ISO 8601 (YYYY-MM-DD). \
 If a return policy or return-by date is printed, extract it as returnDeadline. This data will be \

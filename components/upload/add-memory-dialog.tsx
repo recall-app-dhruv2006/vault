@@ -32,7 +32,7 @@ export function AddMemoryDialog({
       <DialogContent className="sm:max-w-lg">
         <DialogHeader>
           <DialogTitle>Add a memory</DialogTitle>
-          <DialogDescription>Save something now — Recall will organize it automatically.</DialogDescription>
+          <DialogDescription>Save something now — Vault will organize it automatically.</DialogDescription>
         </DialogHeader>
         <Tabs value={tab} onValueChange={(v) => setTab(v as Tab)}>
           <TabsList className="grid grid-cols-5">
@@ -63,7 +63,7 @@ function useSaveResult(onOpenChange: (open: boolean) => void) {
     try {
       const result = await promise;
       if (result.success && result.itemId) {
-        toast({ title: "Saved to Recall", description: "We're analyzing it now — it'll be searchable in a moment.", variant: "success" });
+        toast({ title: "Saved to Vault", description: "We're analyzing it now — it'll be searchable in a moment.", variant: "success" });
         onOpenChange(false);
         router.push(`/item/${result.itemId}`);
         router.refresh();
@@ -112,7 +112,7 @@ function NoteForm({ onOpenChange }: { onOpenChange: (open: boolean) => void }) {
     >
       <div className="space-y-1.5">
         <Label htmlFor="note-title">Title (optional)</Label>
-        <Input id="note-title" placeholder="Recall will suggest one if you leave this blank" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <Input id="note-title" placeholder="Vault will suggest one if you leave this blank" value={title} onChange={(e) => setTitle(e.target.value)} />
       </div>
       <div className="space-y-1.5">
         <Label htmlFor="note-content">Note</Label>

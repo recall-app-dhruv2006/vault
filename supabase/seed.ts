@@ -19,8 +19,8 @@ import type { Database } from "../types/database";
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
-const DEMO_EMAIL = "demo@recall.app";
-const DEMO_PASSWORD = "RecallDemo123!";
+const DEMO_EMAIL = "demo@vault.app";
+const DEMO_PASSWORD = "VaultDemo123!";
 
 if (!SUPABASE_URL || !SERVICE_KEY) {
   console.error("Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in the environment.");

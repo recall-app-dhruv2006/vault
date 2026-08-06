@@ -61,7 +61,7 @@ export default async function HomePage() {
           <EmptyState
             icon={Sparkles}
             title="Nothing saved yet"
-            description="Save your first screenshot, link, note, or PDF and Recall will start organizing it for you."
+            description="Save your first screenshot, link, note, or PDF and Vault will start organizing it for you."
           />
         ) : (
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">

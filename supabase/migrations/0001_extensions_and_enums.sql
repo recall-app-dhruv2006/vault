@@ -1,4 +1,4 @@
--- Recall: extensions + enums
+-- Vault: extensions + enums
 -- Safe to re-run: uses IF NOT EXISTS / DO blocks throughout.
 
 create extension if not exists "uuid-ossp";

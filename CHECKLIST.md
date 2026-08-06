@@ -1,4 +1,4 @@
-# Recall — Implementation Checklist
+# Vault — Implementation Checklist
 
 Running checklist maintained throughout the build (spec rule #19). Status as of final delivery.
 

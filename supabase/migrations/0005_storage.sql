@@ -1,4 +1,4 @@
--- Recall: private storage buckets + policies
+-- Vault: private storage buckets + policies
 -- Paths are always {user_id}/{item_id}/{filename}, so ownership can be
 -- checked from the path itself via storage.foldername(name).
 

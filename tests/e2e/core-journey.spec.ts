@@ -12,7 +12,7 @@ import { test, expect } from "@playwright/test";
  *   npm run test:e2e
  */
 
-const uniqueEmail = `e2e-${Date.now()}@recall-test.local`;
+const uniqueEmail = `e2e-${Date.now()}@vault-test.local`;
 const password = "TestPassword123!";
 
 test.describe("core journey", () => {
@@ -40,7 +40,7 @@ test.describe("core journey", () => {
     await page.getByPlaceholder(/anything you want to remember/i).fill("E2E test note about a biology exam");
     await page.getByRole("button", { name: "Save" }).click();
     await expect(page.getByRole("heading", { name: /privacy/i })).toBeVisible({ timeout: 15_000 });
-    await page.getByRole("button", { name: /go to my memory library|start using recall/i }).click();
+    await page.getByRole("button", { name: /go to my memory library|start using vault/i }).click();
 
     await expect(page).toHaveURL(/\/home/);
 

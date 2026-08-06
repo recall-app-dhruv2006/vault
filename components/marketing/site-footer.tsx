@@ -23,7 +23,7 @@ const COLUMNS = [
     title: "Company",
     links: [
       { href: "/contact", label: "Contact" },
-      { href: "https://status.recall.app", label: "Status" },
+      { href: "https://status.vault.app", label: "Status" },
     ],
   },
 ];

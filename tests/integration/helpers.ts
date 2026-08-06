@@ -22,7 +22,7 @@ export function getTestServiceClient(): SupabaseClient<Database> {
 }
 
 export async function createTestUser(supabase: SupabaseClient<Database>, emailPrefix: string) {
-  const email = `${emailPrefix}-${Date.now()}@recall-test.local`;
+  const email = `${emailPrefix}-${Date.now()}@vault-test.local`;
   const { data, error } = await supabase.auth.admin.createUser({ email, password: "TestPassword123!", email_confirm: true });
   if (error || !data.user) throw new Error(`Failed to create test user: ${error?.message}`);
   return data.user;

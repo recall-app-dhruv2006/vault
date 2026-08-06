@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Security" };
 export default function SecurityPage() {
   return (
     <LegalPage title="Security">
-      <p>An honest look at how Recall protects your data. We only describe controls that are actually implemented.</p>
+      <p>An honest look at how Vault protects your data. We only describe controls that are actually implemented.</p>
       <h2>Data isolation</h2>
       <p>Every table that holds your content enforces Row Level Security in PostgreSQL — the database itself rejects any query that isn't scoped to your own user ID, not just the application code.</p>
       <h2>Private file storage</h2>
