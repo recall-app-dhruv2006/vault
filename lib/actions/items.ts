@@ -14,7 +14,7 @@ import {
   processNoteItem, processLinkItem, processImageItem, processPdfItem, processReceiptItem,
 } from "@/lib/processing/pipeline";
 import { extractPdfText } from "@/lib/processing/extract-pdf";
-import type { Database } from "@/types/database";
+import type { Database, Json } from "@/types/database";
 
 export type ActionResult = { success: true; itemId: string } | { success: false; error: string };
 
@@ -280,7 +280,7 @@ export async function updateItemAction(input: unknown): Promise<ActionResult> {
   if (parsed.data.title !== undefined) { updates.title = parsed.data.title; corrections.title = parsed.data.title; }
   if (parsed.data.summary !== undefined) { updates.summary = parsed.data.summary; corrections.summary = parsed.data.summary; }
   if (parsed.data.isFavorite !== undefined) updates.is_favorite = parsed.data.isFavorite;
-  updates.user_corrections = corrections;
+  updates.user_corrections = corrections as Json;
 
   const { error } = await supabase.from("items").update(updates).eq("id", parsed.data.id).eq("user_id", userId);
   if (error) return { success: false, error: "Couldn't save your changes." };

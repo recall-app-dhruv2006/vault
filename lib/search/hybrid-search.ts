@@ -43,7 +43,7 @@ export async function hybridSearch(userId: string, params: SearchQueryInput): Pr
     try {
       const embedding = await generateEmbedding(semanticQuery);
       const { data: matches } = await supabase.rpc("match_item_embeddings", {
-        query_embedding: embedding as unknown as number[],
+        query_embedding: JSON.stringify(embedding),
         match_user_id: userId,
         match_count: 60,
         similarity_threshold: 0.12,

@@ -6,7 +6,7 @@ import { chunkText, generateEmbeddings } from "@/lib/ai/generate-embedding";
 import { extractLinkMetadata, guessLinkCategory } from "@/lib/processing/extract-link";
 import { extractPdfText } from "@/lib/processing/extract-pdf";
 import type { ItemAnalysis } from "@/lib/ai/schemas";
-import type { ProcessingStatus } from "@/types/database";
+import type { ProcessingStatus, Json } from "@/types/database";
 
 /**
  * Server-side processing pipeline for the MVP.
@@ -55,7 +55,7 @@ async function applyAnalysis(itemId: string, userId: string, analysis: ItemAnaly
       summary: analysis.summary,
       content_category: analysis.contentType,
       searchable_text: analysis.searchableText,
-      ai_analysis: analysis as unknown as Record<string, unknown>,
+      ai_analysis: analysis as unknown as Json,
       ...extra,
     })
     .eq("id", itemId);
@@ -97,7 +97,7 @@ async function saveEmbeddings(itemId: string, userId: string, chunks: { content:
     item_id: itemId,
     user_id: userId,
     content: chunk.content,
-    embedding: vectors[i] ?? null,
+    embedding: (vectors[i] ?? null) as unknown as string | null,
     chunk_index: i,
     page_number: chunk.pageNumber ?? null,
   }));

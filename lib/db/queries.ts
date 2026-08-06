@@ -149,7 +149,7 @@ export async function getRelatedItems(userId: string, itemId: string, limit = 6)
   if (!embedding) return [];
 
   const { data: matches } = await supabase.rpc("match_item_embeddings", {
-    query_embedding: embedding as unknown as number[],
+    query_embedding: embedding,
     match_user_id: userId,
     match_count: limit + 5,
     similarity_threshold: 0.3,

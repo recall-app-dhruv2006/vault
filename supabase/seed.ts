@@ -258,7 +258,7 @@ async function main() {
     const chunks = chunkText(`${seed.title}\n${seed.summary}\n${seed.searchableText}`);
     const vectors = await generateEmbeddings(chunks.length ? chunks : [seed.searchableText]);
     await supabase.from("item_embeddings").insert(
-      vectors.map((embedding, i) => ({ item_id: item.id, user_id: userId, content: chunks[i] ?? seed.searchableText, embedding, chunk_index: i }))
+      vectors.map((embedding, i) => ({ item_id: item.id, user_id: userId, content: chunks[i] ?? seed.searchableText, embedding: JSON.stringify(embedding), chunk_index: i }))
     );
 
     if (seed.receipt) {

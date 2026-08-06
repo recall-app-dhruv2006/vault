@@ -43,6 +43,48 @@ export default function PrivacyPage() {
         <li>We don't claim end-to-end encryption — files are stored securely in private, access-controlled storage, but Vault's servers can technically access content to process it, the same as most SaaS products.</li>
       </ul>
 
+      <h2>Who we share data with</h2>
+      <p>
+        We use a small number of infrastructure and AI providers to operate Vault, each bound by their own
+        privacy and security commitments. We don't sell or rent this data to anyone else.
+      </p>
+      <ul>
+        <li>Database, authentication, and file storage: Supabase.</li>
+        <li>Hosting and delivery of the app itself: Vercel.</li>
+        <li>AI analysis of saved content (titles, summaries, tags, receipt extraction): Anthropic.</li>
+        <li>Semantic search embeddings: Voyage AI.</li>
+        <li>Transactional email (account confirmation, password reset): Resend.</li>
+      </ul>
+
+      <h2>Data retention</h2>
+      <p>
+        We keep your content for as long as your account is active. Items you move to Trash are permanently
+        deleted after 30 days, or immediately if you empty Trash. Deleting your account removes your items,
+        files, embeddings, and account record right away — this action cannot be undone.
+      </p>
+
+      <h2>Cookies</h2>
+      <p>
+        We use only the minimal cookies required to keep you signed in and to remember basic preferences. We
+        don't use third-party advertising or tracking cookies.
+      </p>
+
+      <h2>Children's privacy</h2>
+      <p>Vault isn't intended for children under 13, and we don't knowingly collect data from them.</p>
+
+      <h2>Your rights</h2>
+      <p>
+        Depending on where you live, you may have rights to access, correct, export, or delete your personal
+        data. The controls in Settings → Privacy cover most of these directly; for anything else, contact us and
+        we'll help.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        We may update this policy as the product evolves. We'll update the "last updated" date above when we do;
+        material changes will be communicated in-app.
+      </p>
+
       <h2>Questions</h2>
       <p>Reach us at the address on the Contact page for any privacy question or data request.</p>
     </LegalPage>
