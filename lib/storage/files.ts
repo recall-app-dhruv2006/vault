@@ -1,5 +1,4 @@
 import "server-only";
-import sharp from "sharp";
 import { createServiceClient } from "@/lib/db/client-service";
 import { safeStorageFilename, storagePath } from "@/lib/security/sanitize";
 
@@ -30,6 +29,7 @@ export async function uploadThumbnail(params: {
   sourceBytes: Buffer;
 }): Promise<string | null> {
   try {
+    const { default: sharp } = await import("sharp");
     const thumbnail = await sharp(params.sourceBytes)
       .resize(480, 480, { fit: "inside", withoutEnlargement: true })
       .webp({ quality: 78 })
